@@ -20,4 +20,4 @@ def parse_para_post():
     return "Вы обратились по посту на {}".format(d['body'])
 
 
-app.run()
+###app.run()
