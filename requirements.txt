@@ -1,9 +1,7 @@
 flask
 gunicorn
-dash
-bentoml
 scikit-learn
 pandas
 matplotlib
 rq
-bentoml
+redis

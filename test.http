@@ -1,0 +1,5 @@
+GET http://127.0.0.1:5000/do_long_task
+
+###
+
+GET http://127.0.0.1:5000/get_result/rq:job:a93cd631-67ab-4250-bc49-64f183325c40
