@@ -5,19 +5,20 @@ from rq import Queue
 from rq.job import Job
 from src.task import  very_long_task
 import redis
-
+import dash
 
 redis_url = 'redis://10.180.250.26:6379'
-
 conn = redis.from_url(redis_url)
-
 app = Flask(__name__)
+dapp = dash.Dash(server=app,url_base_pathname='/')
+import src.web_ui
+
+
 q = Queue(connection=conn)
 
-
-@app.route("/",methods=['POST'])
-def hello_world():
-    return "<p>Привет участникам электива"
+@app.route("/hello")
+def hello():
+    return "Hello"
 
 @app.route("/parse/<job>")
 def parse_para(job):
